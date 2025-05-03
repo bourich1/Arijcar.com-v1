@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Détails de la voiture et réservation</title>
+  <meta name="description" content="Louez votre voiture préférée avec ArijCar. Service rapide, fiable et abordable dans tout le Maroc. Réservez en ligne dès maintenant.">
+  <meta name="keywords" content="location voiture Maroc, louer voiture Casablanca, ArijCar, location voiture pas cher, voiture Marrakech, location voiture aéroport, réserver voiture Maroc">
+  <meta name="author" content="ArijCar">
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- link css animition -->
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f9fc;
+      color: #333;
+    }
+
+  
+
+    h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    main {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .car-details-table {
+      width: 100%;
+      max-width: 900px;
+      border-collapse: collapse;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-top: 30px;
+    }
+
+    .car-details-table th,
+    .car-details-table td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .car-details-table th {
+      background-color: #d7220b;
+      color: white;
+      font-size: 1.1rem;
+    }
+
+    .car-details-table td {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .car-details-table tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    .car-image {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    /* Flex for car details and booking */
+    .car-details-container {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    .car-details-container .car-info,
+    .car-details-container .booking-form-container {
+      flex: 1 1 30%;
+      max-width: 50%;
+    }
+
+    /* Gallery Styles */
+    .car-gallery {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .car-gallery img {
+      width: calc(33.33% - 10px);
+      border-radius: 8px;
+      object-fit: cover;
+      height: 150px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .car-gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .car-details-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .car-details-container .car-info,
+      .car-details-container .booking-form-container {
+        max-width: 100%;
+        margin-bottom: 20px;
+      }
+      
+      .car-gallery img {
+        width: calc(50% - 5px);
+      }
+    }
+
+    .booking-section {
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .booking-section h2 {
+      text-align: center;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+
+    .booking-section {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  margin-top: 40px;
+}
+
+.contact-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.contact-header h2 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-top: 15px;
+}
+
+.contact-vector {
+  width: 300px !important;
+  height: 300px;
+  object-fit: contain;
+  margin: auto;
+}
+
+.contact-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-option {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-option:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.whatsapp-option {
+  background: #25D366;
+  color: white;
+}
+
+.phone-option {
+  background: #f5f5f5;
+  color: #333;
+}
+
+.option-icon {
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.option-content h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.option-content p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.contact-footer {
+  text-align: center;
+  margin-top: 25px;
+  color: #7f8c8d;
+  font-size: 0.85rem;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+@media (max-width: 768px) {
+  .booking-section {
+    padding: 20px;
+  }
+  
+  .contact-header h2 {
+    font-size: 1.3rem;
+  }
+}
+  </style>
+</head>
+<body>
+    <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <div class="overlay" data-overlay></div>
+
+      <a href="#" class="logo-header animate__animated animate__zoomInDown">
+        <img src="./assets/images/Asset 4DFD.svg" alt="Ridex logo">
+      </a>
+
+      <div class="header-actions">
+
+        <div class="header-contact">
+          <a href="tel:88002345678" class="contact-link">+212 655-343319</a>
+
+          <span class="contact-time">Mon - Sat: 9:00 am - 6:00 pm</span>
+        </div>
+
+        <a href="#featured-car" class="btn" aria-labelledby="aria-label-txt">
+          <ion-icon name="car-outline"></ion-icon>
+
+          <span id="aria-label-txt">Explorer les voitures</span>
+        </a>
+
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <div class="car-details-container">
+      <section class="car-info" id="car-details">
+        <!-- سيتم ملء تفاصيل السيارة هنا عبر JavaScript -->
+      </section>
+
+      <section class="booking-section">
+        <div class="contact-container">
+          <div class="contact-header">
+            <img src="assets/images/5118756.jpg" alt="تواصل معنا" class="contact-vector">
+            <h2> Contactez-nous pour toute question ou réservation</h2>
+          </div>
+          
+          <div class="contact-options">
+            <!-- خيار الواتساب -->
+            <a href="https://wa.me/+212647262361" id="whatsappBtn" class="contact-option whatsapp-option" target="_blank">
+              <div class="option-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28">
+                  <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+              </div>
+              <div class="option-content">
+                <h3>واتساب</h3>
+                <p>+212 647-262361</p>
+              </div>
+            </a>
+            
+            <!-- خيار الاتصال -->
+            <a href="tel:+212647262361" class="contact-option phone-option">
+              <div class="option-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28">
+                  <path fill="currentColor" d="M20 10.999h2C22 5.869 18.127 2 12.99 2v2C17.052 4 20 6.943 20 10.999z"/>
+                  <path fill="currentColor" d="M13 8c2.103 0 3 .897 3 3h2c0-3.225-1.775-5-5-5v2zm3.422 5.443a1.001 1.001 0 00-1.391.043l-2.393 2.461c-.576-.11-1.734-.471-2.926-1.66-1.192-1.193-1.553-2.354-1.66-2.926l2.459-2.394a1 1 0 00.043-1.391L6.859 3.513a1 1 0 00-1.391-.087l-2.17 1.861a1 1 0 00-.29.649c-.015.25-.301 6.172 4.291 10.766C11.305 20.707 16.323 21 17.705 21c.202 0 .326-.006.359-.008a.992.992 0 00.648-.291l1.86-2.171a.997.997 0 00-.085-1.391l-4.064-3.696z"/>
+                </svg>
+              </div>
+              <div class="option-content">
+                <h3>اتصال مباشر</h3>
+                <p>+212 647-262361</p>
+              </div>
+            </a>
+          </div>
+          
+          <div class="contact-footer">
+            <p>Nous sommes disponibles pour répondre à vos questions tous les jours de 8h à 22h</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+   
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const carDetails = document.getElementById('car-details');
+      const whatsappBtn = document.getElementById('whatsappBtn');
+      
+      // Retrieve car details from Local Storage
+      const selectedCar = JSON.parse(localStorage.getItem('selectedCar'));
+      
+      if (selectedCar) {
+    // إنشاء معرض الصور (يستخدم images إذا وجدت، أو الصور الافتراضية إذا لم توجد)
+    const carImages = selectedCar.images || [
+      selectedCar.image || 'https://via.placeholder.com/600x400?text=Car+Front',
+      'https://via.placeholder.com/600x400?text=Car+Side',
+      'https://via.placeholder.com/600x400?text=Car+Rear'
+    ];
+
+    // دالة لعرض معرض الصور
+    function renderCarGallery(images) {
+      return `
+        <div class="car-gallery">
+          ${images.slice(0, 4).map((img, index) => `
+            <div class="gallery-item">
+              <img src="${img}" alt="${selectedCar.title} - ${['Front', 'Side', 'Rear'][index]}" class="car-image">
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+        
+        carDetails.innerHTML = `
+          <div class="car-gallery">
+            ${carImages.map(img => `<img src="${img}" alt="${selectedCar.title}">`).join('')}
+          </div>
+          <table class="car-details-table">
+            <tr>
+              <th>Modèle de voiture</th>
+              <td>${selectedCar.title} (${selectedCar.year})</td>
+            </tr>
+            <tr>
+              <th>Passagers</th>
+              <td>${selectedCar.passengers}</td>
+            </tr>
+            <tr>
+              <th>Type de carburant</th>
+              <td>${selectedCar.fuel}</td>
+            </tr>
+            <tr>
+              <th>Kilométrage</th>
+              <td>${selectedCar.mileage}</td>
+            </tr>
+            <tr>
+              <th>Transmission</th>
+              <td>${selectedCar.transmission}</td>
+            </tr>
+            <tr>
+              <th>Prix</th>
+              <td>${selectedCar.price}</td>
+            </tr>
+            <tr>
+              <th>Destination</th>
+              <td>${localStorage.getItem('destination') || 'Not specified'}</td>
+            </tr>
+            <tr>
+              <th>Date de prise en charge</th>
+              <td>${localStorage.getItem('pickupDate') || 'Not specified'}</td>
+            </tr>
+          </table>
+        `;
+        
+        // تحديث رسالة واتساب بمعلومات السيارة
+        const message = `مرحبًا، أنا مهتم بحجز السيارة التالية:
+        
+        🚗 ${selectedCar.title} (${selectedCar.year})
+        💵 ${selectedCar.price}
+        
+        المواصفات:
+        - عدد الركاب: ${selectedCar.passengers}
+        - نوع الوقود: ${selectedCar.fuel}
+        - ناقل الحركة: ${selectedCar.transmission}
+        
+        الرجاء التواصل معي لتأكيد الحجز.`;
+        
+        whatsappBtn.href = `https://wa.me/+212647262361?text=${encodeURIComponent(message)}`;
+      } else {
+        carDetails.innerHTML = `<p>No car details available. Please go back and select a car.</p>`;
+      }
+    });
+  </script>
+</body>
+</html>
