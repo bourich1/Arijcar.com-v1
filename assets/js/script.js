@@ -66,12 +66,12 @@ const cars = [
     price: "350 DH",
   },
   {
-    image: "./assets/images/cupra/Cupra -1.jfif",
+    image: "./assets/images/cupra-1/Cupra -1.jfif",
     images: [
       "./assets/images/cupra/Cupra -1.jfif",
       "./assets/images/cupra/Cupra.jpg",
-      "./assets/images/cupra/Cupra -2.jfif",
-      "./assets/images/cupra/Cupra -3.jfif"
+      "./assets/images/cupra/Cupra-2.jfif",
+      "./assets/images/cupra/Cupra-3.jfif"
     ],
     title: "Cupra",
     year: "2025",
