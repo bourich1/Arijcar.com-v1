@@ -42,7 +42,7 @@ const cars = [
       "./assets/images/Volkswagen golf 8/Volkswagen golf 8 -3.jpg"
     ],
     title: "Volkswagen golf 8",
-    year: "none",
+    year: "2024",
     passengers: "4 People",
     fuel: "diésel",
     mileage: "8.2km / 1-litre",
@@ -90,7 +90,7 @@ const cars = [
       "./assets/images/porsche macan s/porsche macan s-3.jpg"
     ],
     title: "porsche macan s",
-    year: "none",
+    year: "2024",
     passengers: "4 People",
     fuel: "diésel",
     mileage: "8.2km / 1-litre",
@@ -106,7 +106,7 @@ const cars = [
       "./assets/images/Volkswagen touareg/Volkswagen touareg -1.jpg"
     ],
     title: "Volkswagen touareg",
-    year: "none",
+    year: "2024",
     passengers: "4 People",
     fuel: "diésel",
     mileage: "8.2km / 1-litre",
