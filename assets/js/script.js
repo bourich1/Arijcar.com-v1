@@ -15,7 +15,7 @@ const cars = [
     fuel: "diésel",
     mileage: "6.1km / 1-litre",
     transmission: "Automatique",
-    price: "440 DH",
+    price: "800 DH / 80 euro",
   },
   {
     image: "./assets/images/Accent/Accent 3.jpg",
@@ -31,7 +31,7 @@ const cars = [
     fuel: "isans",
     mileage: "8.2km / 1-litre",
     transmission: "Automatique",
-    price: "350 DH",
+    price: "250 DH / 25 euro",
   },
   {
     image: "./assets/images/Volkswagen golf 8/Volkswagen golf 8  -2.jpg",
@@ -47,7 +47,7 @@ const cars = [
     fuel: "diésel",
     mileage: "8.2km / 1-litre",
     transmission: "Automatique",
-    price: "350 DH",
+    price: "600 DH / 60 euro",
   },
   {
     image: "./assets/images/RENAULT CLIO 5/RENAULT CLIO 5.jfif",
@@ -63,13 +63,13 @@ const cars = [
     fuel: "isans",
     mileage: "8.2km / 1-litre",
     transmission: "Automatique",
-    price: "350 DH",
+    price: "250 DH / 25 euro",
   },
   {
     image: "./assets/images/Cupra-1/Cupra1.jpg",
     images: [
       "./assets/images/Cupra-1/Cupra1.jpg",
-      "./assets/images/Cupra-1/Cupra2.jfif",
+      "./assets/images/Cupra-1/Cupra2.jpg",
       "./assets/images/Cupra-1/Cupra3.jfif",
       "./assets/images/Cupra-1/Cupra.jpg"
     ],
@@ -79,7 +79,7 @@ const cars = [
     fuel: "diésel",
     mileage: "8.2km / 1-litre",
     transmission: "Automatique",
-    price: "350 DH",
+    price: "600 DH / 60 euro",
   },
   {
     image: "./assets/images/porsche macan s/porsche macan s.jfif",
@@ -95,7 +95,7 @@ const cars = [
     fuel: "diésel",
     mileage: "8.2km / 1-litre",
     transmission: "Automatique",
-    price: "350 DH",
+    price: "2500 DH / 250 euro",
   },
   {
     image: "./assets/images/Volkswagen touareg/Volkswagen touareg -1.jpg",
@@ -111,7 +111,7 @@ const cars = [
     fuel: "diésel",
     mileage: "8.2km / 1-litre",
     transmission: "Automatique",
-    price: "350 DH",
+    price: "2500 DH / 250 euro",
   },
   {
     image: "./assets/images/Volkswagen t-roc/Volkswagen t-roc.jfif",
@@ -127,7 +127,7 @@ const cars = [
     fuel: "diésel",
     mileage: "8.2km / 1-litre",
     transmission: "Automatique",
-    price: "350 DH",
+    price: "500 DH / 50 euro",
   },
   {
     image: "./assets/images/pegeout 208/pegeout 208.jpg",
@@ -143,7 +143,7 @@ const cars = [
     fuel: "diésel",
     mileage: "8.2km / 1-litre",
     transmission: "Manuel",
-    price: "350 DH",
+    price: "250 DH / 25 euro",
   },
   {
     image: "./assets/images/FIAT 500/FIAT 500.jfif",
@@ -159,7 +159,7 @@ const cars = [
     fuel: "isans",
     mileage: "8.2km / 1-litre",
     transmission: "Automatique",
-    price: "350 DH",
+    price: "250 DH / 25 euro",
   },
   {
     image: "./assets/images/DACIA LOGANE/DACIA LOGANE.jpeg",
@@ -175,7 +175,7 @@ const cars = [
     fuel: "isans",
     mileage: "8.2km / 1-litre",
     transmission: "Automatique",
-    price: "350 DH",
+    price: "250 DH / 25 euro",
   },
   {
     image: "./assets/images/RENAULT MEGANE 4/RENAULT MEGANE 4.jpg",
@@ -191,7 +191,7 @@ const cars = [
     fuel: "diésel",
     mileage: "8.2km / 1-litre",
     transmission: "Automatique",
-    price: "350 DH",
+    price: "450 DH / 45 euro",
   },
   {
     image: "./assets/images/OPEL CORSA/OPEL CORSA.jpg",
@@ -207,7 +207,7 @@ const cars = [
     fuel: "diésel",
     mileage: "8.2km / 1-litre",
     transmission: "Manuel",
-    price: "350 DH",
+    price: "250 DH / 25 euro",
   },
   {
     image: "./assets/images/DACIA STEPWAY/DACIA STEPWAY.jpg",
@@ -215,7 +215,7 @@ const cars = [
       "./assets/images/DACIA STEPWAY/DACIA STEPWAY.jpg",
       "./assets/images/DACIA STEPWAY/DACIA STEPWAY-1.jfif",
       "./assets/images/DACIA STEPWAY/DACIA STEPWAY-2.jfif",
-      "./assets/images/DACIA STEPWAY/DACIA STEPWAY-3.jfif"
+      "./assets/images/DACIA STEPWAY/DACIA STEPWAY-3.jpg"
     ],
     title: "DACIA STEPWAY",
     year: "2024",
@@ -223,7 +223,7 @@ const cars = [
     fuel: "diésel",
     mileage: "8.2km / 1-litre",
     transmission: "Manuel",
-    price: "350 DH",
+    price: "300 DH / 30 euro",
   },
   {
     image: "./assets/images/CITROEN C3/CITROEN C3.jfif",
@@ -239,7 +239,7 @@ const cars = [
     fuel: "diésel",
     mileage: "8.2km / 1-litre",
     transmission: "Manuel",
-    price: "350 DH",
+    price: "250 DH / 25 euro",
   },
   {
     image: "./assets/images/Reunalte clio 5/Reunalte clio 5 -2.jpg",
@@ -255,15 +255,15 @@ const cars = [
     fuel: "diésel",
     mileage: "8.2km / 1-litre",
     transmission: "Manuel",
-    price: "350 DH",
+    price: "250 DH / 25 euro",
   },
   {
     image: "./assets/images/RENAULT KARDIAN/RENAULT KARDIAN.jfif",
     images: [
       "./assets/images/RENAULT KARDIAN/RENAULT KARDIAN.jfif",
-      "./assets/images/RENAULT KARDIAN/RENAULT KARDIAN -2.jfif",
-      "./assets/images/RENAULT KARDIAN/RENAULT KARDIAN -1.jfif",
-      "./assets/images/RENAULT KARDIAN/RENAULT KARDIAN -3.jfif"
+      "./assets/images/RENAULT KARDIAN/RENAULT KARDIAN -1.jpg",
+      "./assets/images/RENAULT KARDIAN/RENAULT KARDIAN -2.jpg",
+      "./assets/images/RENAULT KARDIAN/RENAULT KARDIAN -3.jpg"
     ],
     title: "RENAULT KARDIAN",
     year: "2025",
@@ -271,7 +271,7 @@ const cars = [
     fuel: "diésel",
     mileage: "8.2km / 1-litre",
     transmission: "Manuel",
-    price: "350 DH",
+    price: "300 DH / 30 euro",
   },
 ];
 
@@ -411,7 +411,7 @@ cars.forEach((car) => {
         </ul>
         <div class="card-price-wrapper">
           <p class="card-price">
-            <strong>${car.price.split(" ")[0]}</strong> ${car.price.split(" ")[1]}
+            <strong>${car.price}</strong>
           </p>
           <button class="btn rental-btn" data-car='${JSON.stringify(car)}'>Louer maintenant</button>
         </div>
