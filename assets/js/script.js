@@ -411,7 +411,7 @@ cars.forEach((car) => {
         </ul>
         <div class="card-price-wrapper">
           <p class="card-price">
-            <strong>${car.price}</strong>
+            <strong>à partir de <br> ${car.price}</strong>
           </p>
           <button class="btn rental-btn" data-car='${JSON.stringify(car)}'>Louer maintenant</button>
         </div>
@@ -474,7 +474,7 @@ cars.forEach((vehicle) => {
         </ul>
         <div class="card-price-wrapper">
           <p class="card-price">
-            <strong>${vehicle.price.split(" ")[0]}</strong> ${vehicle.price.split(" ")[1]}
+           <strong>à partir de <br> ${vehicle.price}</strong>
           </p>
           <button class="btn rental-btn" data-car='${JSON.stringify(vehicle)}'>Louer maintenant</button>
         </div>
