@@ -32,8 +32,9 @@
     <!-- link css animition -->
     <link
     rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -241,6 +242,32 @@
     </article>
   </main>
 
+  <section class="testimonials-section">
+    <div class="section-header">
+        <h2>Avis de nos clients</h2>
+        <p>Découvrez les expériences des voyageurs du monde entier avec notre service de location de voitures</p>
+    </div>
+
+    <div class="controls">
+        <button class="filter-btn active" data-lang="all">All</button>
+        <button class="filter-btn" data-lang="en">English</button>
+        <button class="filter-btn" data-lang="fr">French</button>
+        <button class="filter-btn" data-lang="ar">Arabic</button>
+        <button class="filter-btn" data-lang="ma">Moroccan</button>
+    </div>
+
+    <div class="testimonials-scroll-container" id="scrollContainer">
+        <div class="testimonials-container">
+            
+        </div>
+    </div>
+
+    <div class="scroll-controls">
+        <button class="scroll-btn" id="scrollLeft"><i class="fas fa-chevron-left"></i></button>
+        <button class="scroll-btn" id="scrollRight"><i class="fas fa-chevron-right"></i></button>
+    </div>
+</section>
+
 
 
 
@@ -344,6 +371,7 @@
     - custom js link
   -->
   <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/testimonial.js"></script>
 
   <!-- 
     - ionicon link
